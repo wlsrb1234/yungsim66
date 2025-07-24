@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학급 자리배치</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <h1>학급 자리배치 (30명)</h1>
+        
+        <div class="controls">
+            <div class="student-input">
+                <input type="text" id="studentName" placeholder="학생 이름 입력">
+                <button onclick="addStudent()">학생 추가</button>
+            </div>
+            <div class="buttons">
+                <button onclick="shuffleSeating()">자동 배치</button>
+                <button onclick="clearAll()">모두 지우기</button>
+                <button onclick="resetSeating()">자리 초기화</button>
+            </div>
+        </div>
+
+        <div class="student-list">
+            <h3>학생 목록 (<span id="studentCount">0</span>/30명)</h3>
+            <div id="studentListContainer"></div>
+        </div>
+
+        <div class="classroom">
+            <div class="teacher-desk">교탁</div>
+            <div class="seating-grid" id="seatingGrid">
+                <!-- 자리는 JavaScript로 생성됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
